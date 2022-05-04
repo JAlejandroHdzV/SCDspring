@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="btn-group navbar-right" role="group" aria-label="..." th:fragment="dropDownLanguage">
+
+	<ul style="text-decoration: none">
+		<li class=" dropdown" style="text-decoration: none"><a
+			class="lang" style="color: white; text-decoration: none"
+			data-toggle="dropdown" id="dropdownLanguage" aria-haspopup="true"
+			aria-expanded="false"><span
+				class="text-white" th:text="#{text.lang}">IDIOMA</span></a>
+
+			<div class="dropdown-menu" aria-labelledby="dropdownLanguage">
+				<a class="dropdown-item" style="display: block;"
+					th:href="@{/_api/global/locale?lang=es_ES}"
+					th:text="#{text.lang.es}">ES</a> <a class="dropdown-item"
+					style="display: block;" th:href="@{/_api/global/locale?lang=en_US}"
+					th:text="#{text.lang.en}">US</a> <a class="dropdown-item"
+					style="display: block;" th:href="@{/_api/global/locale?lang=pt_BR}"
+					th:text="#{text.lang.pt}">PT</a>
+			</div></li>
+	</ul>
+
+
+	<a class="btn global-btn phone-btn" th:href="@{/logout}"
+		style="color: white; vertical-align: middle"> <i
+		class="icon-globe"></i> <span class="hidden-xs"
+		style="margin-left: 10px;" th:text="#{text.logout} +' '+ ${wwid}"></span>
+
+		<!--+' '+${language}  <span class="hidden-xs" style="margin-left: 10px;" th:if="${language=='pt'}" th:text="'Fechar Sessão ' + ${wwid}+' '+${language} "></span>-->
+		<!--  <span class="hidden-xs" style="margin-left: 10px;" th:if="${language=='en'}" th:text="'Logout ' + ${wwid}+' '+${language} "></span>-->
+	</a>
+</div>
+</body>
+</html>

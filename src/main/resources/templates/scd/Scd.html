@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="headerScd :: head">
+    <meta charset="UTF-8" />
+    <title>SCD</title>
+</head>
+
+<body>
+
+    <div th:replace="headerScd :: header"></div>
+
+    <!-- Begin Breadcrumbs -->
+    <div class="breadcrumb-component">
+        <div class="container">
+            <div id="bc1" class="btn-group btn-breadcrumb">
+                <a th:href="@{/view/}" class="btn btn-default">
+                    <div>Home</div>
+                </a>
+                 <a id="bcModulo" th:if="${isAdmin == '1' && language=='es'}" th:href="@{/view/} + 'admin/Admin'" class="btn btn-default" th:text="#{text.admin.catalogs.administration}">Administración</a>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumbs -->
+
+    <!-- Begin 2 Column Layout Section -->
+    
+    <div th:replace="footer :: footer"></div>
+
+</body>
+
+</html>

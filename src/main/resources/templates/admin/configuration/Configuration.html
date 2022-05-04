@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	 <meta charset="UTF-8" />
+    <th:block th:include="header :: head"></th:block>
+
+    <link rel="stylesheet" th:href="@{/css/catalogs/styles.css}" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  | <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div th:replace="header :: header"></div>
+
+    <!-- Begin Breadcrumbs -->
+    <div class="breadcrumb-component">
+        <div class="container">
+            <div id="bc1" class="btn-group btn-breadcrumb">
+                <a th:href="@{../../../index}" class="btn btn-default">Home</a>
+                
+                <a id="bcModulo" th:if="${isAdmin == '1'}" th:href="@{/view/} + 'admin/Admin'" class="btn btn-default" th:text="#{text.admin.catalogs.administration}">Administración</a>
+                <!--  <a id="bcModulo" th:if="${isAdmin == '1' && language=='pt'}" th:href="@{/view/} + 'admin/Admin'" class="btn btn-default" >Administração</a>
+                <a id="bcModulo" th:if="${isAdmin == '1' && language=='en'}" th:href="@{/view/} + 'admin/Admin'" class="btn btn-default" >Administration</a>-->
+                
+                <a id="bcModulo" th:if="${isAdmin == '1' && language=='es'}" th:href="@{/view/} + 'admin/configuration/configuration'" class="btn btn-default active" th:text="#{text.sidebar.left.configuration}">Configuración</a>
+            	<!-- <a id="bcModulo" th:if="${isAdmin == '1' && language=='pt'}" th:href="@{/view/} + 'admin/configuration/configuration'" class="btn btn-default active">Contexto</a>
+            	<a id="bcModulo" th:if="${isAdmin == '1' && language=='en'}" th:href="@{/view/} + 'admin/configuration/configuration'" class="btn btn-default active">Configuration</a> -->
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumbs -->
+
+    <div class="container" style="width: 100%; margin-top: 15px;">
+        <div th:replace="admin/Admin :: menu">
+            
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <div th:fragment="menuConfig">
+                <nav >
+                    <ul id="topnav" class="pull-right" style="padding-left: 0px;">
+                        
+                        <!-- EVALUATION PERIODS -->
+                        <li th:if="${isAdmin == '1' }" class="divider"></li>
+                        <li th:if="${isAdmin == '1' }" >
+		                        <a th:if="${isAdmin == '1' }" th:href="@{/view/} + 'admin/configuration/evaluationPeriods'" th:text="#{text.admin.configuration.evaluationPeriods}">Periodos de Evaluación</a>
+                        </li>
+                        
+                        <!-- PRODUCTS BY EVALUATION -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1'}">
+                        		<a th:if="${isAdmin == '1'}"  th:href="@{/view/} + 'admin/configuration/productsEvaluation'" th:text="#{text.admin.configuration.productsEvaluation}">Productos por Evaluación</a>
+                      
+                        </li>
+                        
+                        <!-- PROFILES -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1'}">
+                        		<a th:if="${isAdmin == '1'}" th:href="@{/view/} + 'admin/configuration/loadProfiles'" th:text="#{text.admin.configuration.profiles}">Perfiles</a>
+                        </li>
+                    
+                    </ul>
+                </nav>
+            </div>
+            <div>
+
+            </div>
+
+            
+        </div>
+    </div>
+
+    <div th:replace="footer :: footer"></div>
+
+</body>
+
+</html>

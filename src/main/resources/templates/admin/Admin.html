@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="header :: head">
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+</head>
+
+<body>
+
+    <div th:replace="header :: header"></div>
+
+    <!-- Begin Breadcrumbs -->
+    <div class="breadcrumb-component">
+        <div class="container">
+            <div id="bc1" class="btn-group btn-breadcrumb">
+                <a th:href="@{../../index}" class="btn btn-default">
+                    <div>Home</div>
+                </a>
+                 <a id="bcModulo" th:if="${isAdmin == '1' && language=='es'}" th:href="@{/view/} + 'admin/Admin'" class="btn btn-default" th:text="#{text.admin.catalogs.administration}">Administración</a>
+                <!-- <a id="bcModulo" th:if="${isAdmin == '1' && language=='pt'}" th:href="@{/view/} + 'admin/Admin'" class="btn btn-default" >Administração</a>
+                <a id="bcModulo" th:if="${isAdmin == '1' && language=='en'}" th:href="@{/view/} + 'admin/Admin'" class="btn btn-default" >Administration</a>-->
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumbs -->
+
+    <!-- Begin 2 Column Layout Section -->
+    <div class="container" style="width: 100%; margin-top: 15px;">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 l-n" th:fragment="menu">
+            <!-- Begin Left Nav Section -->
+            <div class="left-navigation">
+                <ul id="left-nav">
+                
+                
+                	<!-- CATALOGS -->
+                    <li th:if="${isAdmin == '1' }" id="menuRegiones"><a th:href="@{/view/} + 'admin/catalogs/Catalogs'" th:text="#{text.sidebar.left.catalogs}">Catálogos</a></li>
+                    <!--  <li th:if="${isAdmin == '1'&& language=='pt'}" id="menuRegiones"><a th:href="@{/view/} + 'admin/catalogs/Catalogs'">Catálogos</a></li>
+                    <li th:if="${isAdmin == '1'&& language=='en'}" id="menuRegiones"><a th:href="@{/view/} + 'admin/catalogs/Catalogs'">Catalogs</a></li>-->
+                    
+                    <!-- PARTS AND TOOLS -->
+                    <li th:if="${isAdmin == '1' }" id="menuPH"><a th:href="@{/view/} + 'admin/partsAndTools/PartsAndTools'" th:text="#{text.sidebar.left.partsAndTools}">Partes y Herramientas</a></li>
+                    <!--  <li th:if="${isAdmin == '1' && language=='pt'}" id="menuPH"><a th:href="@{/view/} + 'admin/partsAndTools/PartsAndTools'">Peças e Ferramentas</a></li>
+                    <li th:if="${isAdmin == '1' && language=='en'}" id="menuPH"><a th:href="@{/view/} + 'admin/partsAndTools/PartsAndTools'">Parts and Tools</a></li>-->
+                    
+                    <!-- INFORMATION LOAD -->
+                    <li th:if="${isAdmin == '1' }" id="menuProgramas"><a th:href="@{/view/} + 'admin/informationLoad/InformationLoad'" th:text="#{text.sidebar.left.informationLoad}">Carga de Información</a></li>
+                    <!-- <li th:if="${isAdmin == '1' }" id="menuProgramas"><a th:href="@{/view/} + 'admin/informationLoad/InformationLoad'">Carga de Informação</a></li>
+                    <li th:if="${isAdmin == '1' }" id="menuProgramas"><a th:href="@{/view/} + 'admin/informationLoad/InformationLoad'">Information Load</a></li> -->
+                    
+                    <!-- CONFIG -->
+                    <li th:if="${isAdmin == '1'}" id="menuRoles"><a th:href="@{/view/} + 'admin/configuration/Configuration'" th:text="#{text.sidebar.left.configuration}">Configuración</a></li>
+                    <!--  <li th:if="${isAdmin == '1'}" id="menuRoles"><a th:href="@{/view/} + 'admin/configuration/Configuration'">Contexto</a></li>
+                    <li th:if="${isAdmin == '1'}" id="menuRoles"><a th:href="@{/view/} + 'admin/configuration/Configuration'">Configuration</a></li>-->
+                    
+                    <!-- ACCESS CONTROL -->
+                    <li th:if="${isAdmin == '1'}" id="menuAccesos"><a th:href="@{/view/} + 'admin/accessControl/AccessControl'" th:text="#{text.sidebar.left.accessControl}">Control de Accesos</a></li>
+                    <!--<li th:if="${isAdmin == '1' && language=='pt'}" id="menuAccesos"><a th:href="@{/view/} + 'admin/accessControl/AccessControl'">Controle de Acesso</a></li>
+                    <li th:if="${isAdmin == '1' && language=='en'}" id="menuAccesos"><a th:href="@{/view/} + 'admin/accessControl/AccessControl'">Access Control</a></li>  -->                
+                
+                </ul>
+            </div>
+            <!-- End Left Nav Section -->
+        </div>
+    </div>
+
+    <div th:replace="footer :: footer"></div>
+
+</body>
+
+</html>
+

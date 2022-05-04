@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head >
+<link rel="stylesheet" th:href="@{/bootstrap3/css/bootstrap.css}" />
+ <link rel="stylesheet" th:href="@{/css/cmi.css}" />
+ <link rel="shortcut icon" th:href="@{/img/navigation/favicon.ico}" />
+ <link rel="stylesheet" th:href="@{/css/cmmi_components.css}" />
+<link rel="stylesheet" th:href="@{/js/complaints/styles.css}" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <title>DES - Complaints</title>
+</head>
+
+
+<body>
+	<!-- Begin Header Section -->
+        <div class="header">
+        <div th:fragment="logout" class="top">
+            <!-- Begin Global Container -->
+            <div class="container" style="margin-left:0px; width:auto; margin-right:5px">
+                <!-- Begin Responsive Container -->
+                <div id="global-buttons" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <!-- Begin Global Navigation Bar -->
+                    
+                    <div th:replace="shared/dropDownLanguage :: dropDownLanguage"></div>
+                    
+                    <!-- End Global Navigation Bar -->
+                </div>
+                <!-- End Responsive Container -->
+            </div>
+            <!-- End Global Container -->
+        </div>
+        
+            <!-- Begin Container Section -->
+            <div class="container">
+                <!-- Begin Full Size Navbar -->
+                <div class="navbar-header">
+                    <div class="logo col-sm-4 col-md-4 col-lg-4">
+                        <div class="logo_img">
+                            <img th:src="@{/img/navigation/cummins_logo.png}" alt="logo" />
+                        </div>
+                        <div class="sub-brand">
+                            <h2>Dealer Evaluation System</h2>
+                        </div>
+                    </div>
+                    <div class="row col-lg-8 col-md-8 col-sm-8">
+                   <!-- 
+                   Rol 1 = Adm
+                   Rol 2 = DR
+                   Rol 3 = Lectura
+                    -->
+                    <nav class="main_menu">
+                        <ul id="nav" class="pull-right" style="padding-left: 0px;">
+                            <li th:if="${Rol == '1' || Rol == '2' || Rol == '3'}" class="divider"></li>
+                            <li th:if="${Rol == '1' || Rol == '2' || Rol == '3'}"><a th:href="@{/view/} + 'scd/acceso/Acceso'" th:text="#{text.nav.scd}">SCD</a></li>
+                            <li th:if="${Rol == '1'}" class="divider"></li>
+                            <li th:if="${Rol == '1'}"><a th:href="@{/view/} + 'admin/Procesos'" th:text="#{text.nav.infant}">INFANT CARE</a></li>
+                            <li th:if="${Rol == '1'}" class="divider"></li>
+                            
+                            <!-- Quejas -->
+                            <li th:if="${Rol == '1' || Rol == '4'}"><a th:href="@{/view/} + 'Complaints/complaints'" th:text="#{text.nav.complaints}">QUEJAS</a></li>
+                            <li th:if="${Rol == '1' || Rol == '4'}" class="divider"></li>
+                            
+                            
+                            <li th:if="${Rol == '1'}"><a th:href="@{/view/} + 'admin/Admin'" th:text="#{text.nav.administration}">ADMINISTRACIÓN</a></li>
+                            <li th:if="${Rol == '1'}" class="divider"></li>
+                        </ul>
+                    </nav>
+                    </div>
+           
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+                
+                <!-- End Full Size Navbar -->
+            </div>
+            <!-- End Container Section -->
+        </div>
+
+    <!-- Begin Breadcrumbs -->
+    <div class="breadcrumb-component"style="width: 100%; margin-top: 5px;">
+        <div class="container">
+            <div id="bc1" class="btn-group btn-breadcrumb">
+                <a th:href="@{../../index}" class="btn btn-default">
+                    <div>Home</div>
+                </a>
+                 <a id="bcModulo" th:if="${isAdmin == '1' && language=='es'}" th:href="@{/view/} + 'admin/Admin'" class="btn btn-default" th:text="#{text.admin.catalogs.administration}">Administración</a>
+                <!-- <a id="bcModulo" th:if="${isAdmin == '1' && language=='pt'}" th:href="@{/view/} + 'admin/Admin'" class="btn btn-default" >Administração</a>
+                <a id="bcModulo" th:if="${isAdmin == '1' && language=='en'}" th:href="@{/view/} + 'admin/Admin'" class="btn btn-default" >Administration</a>-->
+            </div>
+        </div>
+    </div>
+	
+	<div class="container" style="width: 100%; margin-top: 15px;">
+        
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div style="margin-top: 15px;">
+                <app-complaints-root></app-complaints-root>
+                <!-- INCLUDES JS CATALOGS -->
+				<th:block th:include="shared/JsAngularImports :: complaints"></th:block>
+            </div>
+        </div>
+    </div>
+</body>
+<div th:replace="footer :: footer"></div>
+</html>
+

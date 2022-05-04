@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	 <meta charset="UTF-8" />
+    <th:block th:include="header :: head"></th:block>
+
+    <link rel="stylesheet" th:href="@{/css/configuration/styles.css}" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div th:replace="header :: header"></div>
+
+    <!-- Begin Breadcrumbs -->
+    <div class="breadcrumb-component">
+        <div class="container">
+            <div id="bc1" class="btn-group btn-breadcrumb">
+                <a th:href="@{/view/} + 'modulo/pagos'" class="btn btn-default">
+                    <div>Home</div>
+                </a>
+                <a id="bcModulo" th:href="@{/view/} + 'admin/configuration/Configuration'" class="btn btn-default">
+                    <div>Configuración</div>
+                </a>
+                <a id="bcModulo" th:href="@{/view/} + 'admin/configuration/productsEvaluation'" class="btn btn-default active">
+                    <div>Productos por Evaluación</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumbs -->
+
+    <div class="container" style="width: 100%; margin-top: 15px;">
+        <div th:replace="admin/Admin :: menu"></div>
+        
+        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <div th:replace="admin/configuration/Configuration :: menuConfig" ></div>
+            <div style="margin-top: 25px;">
+                <conf-root></conf-root>
+				<!-- INCLUDES JS ACCESS CONFIGURATION -->
+				<th:block th:include="shared/JsAngularImports :: adminConfiguration"></th:block>
+            </div>
+        </div>
+    </div>
+
+    <div th:replace="footer :: footer"></div>
+
+</body>
+
+</html>

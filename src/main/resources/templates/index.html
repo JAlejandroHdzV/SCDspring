@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="header :: head">
+    <title></title>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+
+    <div th:replace="header :: header"></div>
+
+    <!-- Begin Breadcrumbs -->
+    <div class="breadcrumb-component">
+        <div class="container">
+            <div id="bc1" class="btn-group btn-breadcrumb">
+            
+                <a href="#" class="btn btn-default active">
+                    <div>Home</div>
+                </a>
+                
+            </div>
+            <!--  <div class="row col-lg-3">
+                        
+                        
+                        	<div class="mr-0 my-auto">
+			                	<select id="language" onchange="idioma(this.value)" class="form-control">
+			                	<option value="es" >Español</option>
+			                	<option value="en">English</option>
+			                	<option value="pt">português</option>
+			                	</select>
+		                	</div>
+		                	
+		                
+		   </div>-->
+            
+        </div>
+        
+    </div>
+    <!-- End Breadcrumbs -->
+    <div style="background-color: black; text-align: center;">
+        <img th:src="@{/img/Distribution.PNG}">
+    </div>
+    <div th:replace="footer :: footer"></div>
+
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<script type="text/javascript">
+
+function idioma(value){
+	//var Url="/DES/_api/global/language/"+value
+	
+	var baseLink = "/*[[@{/}]]*/";
+	var resource;
+	switch(value){
+	case "es":
+		resource=/*[[@{_api/global/locale?lang=es_ES}]]*/'';
+		break;
+	case "en":
+		resource=/*[[@{_api/global/locale?lang=en_US}]]*/'';
+		break;
+	case "pt":
+		resource=/*[[@{_api/global/locale?lang=pt_BR}]]*/'';
+		break;
+	
+	}
+	var Url=resource;
+	//alert(Url)
+	var lenguaje=$("#language").val();
+	//alert(lenguaje);
+	
+	$.ajax({
+		type: "POST",
+		contentType:"application/json",
+		url: Url
+	});
+	
+}
+</script>
+
+</html>

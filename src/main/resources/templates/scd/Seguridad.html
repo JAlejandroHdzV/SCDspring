@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="header :: head">
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+</head>
+
+<body>
+
+    <div th:replace="header :: header"></div>
+
+    <!-- Begin Breadcrumbs -->
+    <div class="breadcrumb-component">
+        <div class="container">
+            <div id="bc1" class="btn-group btn-breadcrumb">
+                <a th:href="@{../../index}" class="btn btn-default">
+                    <div>Home</div>
+                </a>
+                <a id="bcModulo" th:href="@{/view/} + 'seguridad/Seguridad'" class="btn btn-default active">
+                    <div>Seguridad</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumbs -->
+
+    <!-- Begin 2 Column Layout Section -->
+    <div class="container" style="width: 100%">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 l-n" th:fragment="menu">
+            <!-- Begin Left Nav Section -->
+            <div class="left-navigation">
+                <ul id="left-nav">
+                    <li th:if="${isAdmin == '1'}" id="menuRegiones"><a th:href="@{/view/} + 'seguridad/regiones'">Regiones</a></li>
+                    <li th:if="${isAdmin == '1'}" id="menuBu"><a th:href="@{/view/} + 'seguridad/bu'">BU</a></li>
+                    <li th:if="${isAdmin == '1'}" id="menuProgramas"><a th:href="@{/view/} + 'seguridad/programas'">Programas</a></li>
+                    <li th:if="${isAdmin == '1'}" id="menuRoles"><a th:href="@{/view/} + 'seguridad/roles'">Roles</a></li>
+                    <li th:if="${isAdmin == '1'}" id="menuGrupos"><a th:href="@{/view/} + 'seguridad/grupos'">Grupos</a></li>
+                    <li th:if="${isAdmin == '1'}" id="menuUsuarios"><a th:href="@{/view/} + 'seguridad/usuarios'">Usuarios</a></li>
+                </ul>
+            </div>
+            <!-- End Left Nav Section -->
+        </div>
+    </div>
+
+    <div th:replace="footer :: footer"></div>
+
+</body>
+
+</html>

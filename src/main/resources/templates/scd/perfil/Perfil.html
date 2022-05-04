@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	 <meta charset="UTF-8" />
+    <th:block th:include="headerScd :: head"></th:block>
+
+    <link rel="stylesheet" th:href="@{/css/catalogs/styles.css}" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div th:replace="headerScd :: header"></div>
+
+    <!-- Begin Breadcrumbs -->
+    <div class="breadcrumb-component">
+        <div class="container">
+            <div id="bc1" class="btn-group btn-breadcrumb">
+                <a th:href="@{/view/} + 'modulo/pagos'" class="btn btn-default">
+                    <div>Home</div>
+                </a>
+                <a id="bcModulo" th:href="@{/view/} + 'scd/Scd'" class="btn btn-default">
+                    <div>SCD</div>
+                </a>
+                <a id="bcModulo" th:href="@{/view/} + 'scd/perfil/Perfil'" class="btn btn-default active">
+                    <div>Perfil</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumbs -->
+
+    <div class="container" style="width: 100%; margin-top: 15px;">
+        <div class="container" style="width: 100%; margin-top: 15px;">
+        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 l-n" th:fragment="menu">
+            <!-- Begin Left Nav Section -->
+            <div class="left-navigation">
+                <ul id="left-nav">
+                
+                    <li th:if="${Rol == '1'}" id="menuRegiones"><a th:href="@{/view/} + 'scd/perfil/perfiles'" >Ver perfiles</a></li>
+                    
+                    <!--  <li th:if="${isAdmin == '1' }" id="menuPH"><a th:href="@{/view/} + 'admin/partsAndTools/PartsAndTools'" th:text="#{text.sidebar.left.partsAndTools}">Partes y Herramientas</a></li>
+                    
+                    <li th:if="${isAdmin == '1' }" id="menuProgramas"><a th:href="@{/view/} + 'admin/informationLoad/InformationLoad'" th:text="#{text.sidebar.left.informationLoad}">Carga de Información</a></li>
+                    
+                    <li th:if="${isAdmin == '1'}" id="menuRoles"><a th:href="@{/view/} + 'admin/configuration/Configuration'" th:text="#{text.sidebar.left.configuration}">Configuración</a></li>
+                  
+                    <li th:if="${isAdmin == '1'}" id="menuAccesos"><a th:href="@{/view/} + 'admin/accessControl/AccessControl'" th:text="#{text.sidebar.left.accessControl}">Control de Accesos</a></li>-->
+                
+                </ul>
+            </div>
+            <!-- End Left Nav Section -->
+        </div>
+    </div>
+        
+        <!--  <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                <profiles-root></profiles-root>
+
+                <script th:src="@{/js/profiles/runtime.js}" type="module"></script>                
+                <script th:src="@{/js/profiles/polyfills.js}" type="module"></script>
+                <script th:src="@{/js/profiles/main.js}" type="module"></script>
+                <script th:src="@{/js/profiles/1.js}" type="module"></script>
+                <script th:src="@{/js/profiles/5.js}" type="module"></script>
+                <script th:src="@{/js/profiles/6.js}" type="module"></script>-->
+                <!--  <script th:src="@{/js/catalog/7.js}" type="module"></script>
+                <script th:src="@{/js/catalog/8.js}" type="module"></script>
+                <script th:src="@{/js/catalog/9.js}" type="module"></script>
+                <script th:src="@{/js/catalog/10.js}" type="module"></script>
+                <script th:src="@{/js/catalog/11.js}" type="module"></script>
+                <script th:src="@{/js/catalog/12.js}" type="module"></script>
+            </div>
+        </div>-->
+    </div>
+
+    <div th:replace="footer :: footer"></div>
+
+</body>
+
+</html>

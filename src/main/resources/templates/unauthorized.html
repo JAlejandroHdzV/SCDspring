@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head >
+<link rel="stylesheet" th:href="@{/bootstrap3/css/bootstrap.css}" />
+ <link rel="stylesheet" th:href="@{/css/cmi.css}" />
+ <link rel="shortcut icon" th:href="@{/img/navigation/favicon.ico}" />
+ <link rel="stylesheet" th:href="@{/css/cmmi_components.css}" />
+<link rel="stylesheet" th:href="@{/js/complaints/styles.css}" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <title th:text="#{text.unauthorized.title}">DES - Unauthorized</title>
+</head>
+<body>
+<h1 th:text="#{text.unauthorized.h1}">Acceso no autorizado</h1>
+<p th:text="#{text.unauthorized.p}">
+El usuario no tiene acceso a este modulo
+
+</p>
+<a th:href="@{/index}">Home</a>
+</body>
+</html>

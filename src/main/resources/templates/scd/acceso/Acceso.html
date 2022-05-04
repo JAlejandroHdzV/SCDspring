@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	 <meta charset="UTF-8" />
+    <th:block th:include="header :: head"></th:block>
+
+    <link rel="stylesheet" th:href="@{/css/catalogs/styles.css}" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div th:replace="header :: header"></div>
+
+    <!-- Begin Breadcrumbs -->
+    <div class="breadcrumb-component">
+        <div class="container">
+            <div id="bc1" class="btn-group btn-breadcrumb">
+                <a th:href="@{/view/}" class="btn btn-default">
+                    <div>Home</div>
+                </a>
+                <a id="bcModulo" th:href="@{/view/} + 'scd/acceso/Acceso'" class="btn btn-default">
+                    <div>Acceso</div>
+                </a>
+                <!--  <a id="bcModulo" th:href="@{/view/} + 'admin/catalogs/countries'" class="btn btn-default active">
+                    <div>SCD</div>
+                </a>-->
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumbs -->
+
+    <div class="container" style="width: 100%; margin-top: 15px;">
+        
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <profiles-root></profiles-root>
+
+                <script th:src="@{/js/profiles/runtime.js}" type="module"></script>                
+                <script th:src="@{/js/profiles/polyfills.js}" type="module"></script>
+                <script th:src="@{/js/profiles/main.js}" type="module"></script>
+                <script th:src="@{/js/profiles/1.js}" type="module"></script>
+                <script th:src="@{/js/profiles/5.js}" type="module"></script>
+                <script th:src="@{/js/profiles/6.js}" type="module"></script>
+                <!--  <script th:src="@{/js/catalog/7.js}" type="module"></script>'
+                <script th:src="@{/js/catalog/8.js}" type="module"></script>
+                <script th:src="@{/js/catalog/9.js}" type="module"></script>
+                <script th:src="@{/js/catalog/10.js}" type="module"></script>
+                <script th:src="@{/js/catalog/11.js}" type="module"></script>
+                <script th:src="@{/js/catalog/12.js}" type="module"></script>-->
+            </div>
+        </div>
+    </div>
+
+    <div th:replace="footer :: footer"></div>
+
+</body>
+
+</html>

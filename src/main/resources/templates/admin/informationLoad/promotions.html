@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<!-------------------------------------- HEAD --------------------------------------------------------->
+<head>
+	 <meta charset="UTF-8" />
+    <th:block th:include="header :: head"></th:block>
+
+    <link rel="stylesheet" th:href="@{/css/informationLoad/styles.css}" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<!------------------------------------  END HEAD ------------------------------------------------------->
+	<body>
+	
+	    <div th:replace="header :: header"></div>
+	
+	    <!-------------------------------------- BREADCRUMBS --------------------------------------------------------->
+	    <div class="breadcrumb-component">
+	        <div class="container">
+	            <div id="bc1" class="btn-group btn-breadcrumb">
+	                <a th:href="@{/view/}" class="btn btn-default">
+	                    <div th:text="#{text.admin.catalogs.home}">Home</div>
+	                </a>
+	                <a id="bcModulo" th:href="@{/view/} + 'admin/informationLoad/InformationLoad'" class="btn btn-default">
+	                    <div th:text="#{text.sidebar.left.informationLoad}">Carga de Información</div>
+	                </a>
+	                <a id="bcModulo" th:href="@{/view/} + 'admin/informationLoad/promotions'" class="btn btn-default active">
+	                    <div th:text="#{text.admin.informationLoad.promotions}">Promotions</div>
+	                </a>
+	            </div>
+	        </div>
+	    </div>
+	    <!------------------------------------ END BREADCRUMBS ------------------------------------------------------>
+	
+		<!--------------------------------------    CONTENT     --------------------------------------->
+	    <div class="container" style="width: 100%; margin-top: 15px;">
+	        <div th:replace="admin/Admin :: menu"></div>
+	        
+	        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+	            <div th:replace="admin/informationLoad/InformationLoad :: menuInformationLoad" ></div>
+	            <div style="margin-top: 25px;">
+	                <infL-root></infL-root>
+					<!-- INCLUDES JS INFORMATION LOAD -->
+					<th:block th:include="shared/JsAngularImports :: adminInformationLoad"></th:block>
+	                
+	                
+	            </div>
+	        </div>
+	    </div>
+	    <!--------------------------------------- END CONTENT     --------------------------------------->
+	
+		<!-- FOOTER -->
+	    <div th:replace="footer :: footer"></div>
+	
+	</body>
+
+</html>

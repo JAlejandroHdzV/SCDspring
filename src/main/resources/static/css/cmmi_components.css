@@ -1,0 +1,2247 @@
+/********************************************
+In this CSS you will find following cmmi components together:;
+> Global Header Component Stylesheet
+> Banner Navigation Component Stylesheet
+> Breadcrumb Component Component Stylesheet
+> Left Navigation Component Stylesheet
+> Fat Footer Component Stylesheet
+> Social Media Footer Component Stylesheet
+> Global Footer Component Stylesheet
+> In-Page Carousel Component Stylesheet
+> Contact Form Component Stylesheet
+********************************************/
+
+
+/*
+Global Header Component Stylesheet
+Cummins UX Standards Template
+(C)2015 Cummins Inc., Box 3005, Columbus, IN 47202-3005 U.S.A.
+For questions, UI standards and more contact the Cummins UX Team
+*/
+
+body>div>.top {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #000;
+    padding: 0px 0 7px;
+    height: 35px;
+}
+
+.top .container {
+    padding-right: 15px;
+}
+
+#global-buttons {
+    padding-right: 5px;
+}
+
+.global-container {
+    max-width: 1024px;
+}
+
+.navbar-right .global-btn {
+    border: 0px;
+    background: none;
+    padding: 6px 0;
+    border-radius: 0;
+}
+
+.navbar-right .global-btn:hover,
+.navbar-right .global-btn:active {
+    background: #333;
+}
+
+.navbar-right .global-btn:hover a .icon-globe,
+.navbar-right .open .global-btn a .icon-globe {
+    background: url("../img/cmi_webicon_sprite.png") no-repeat scroll -70px -1910px rgba(0, 0, 0, 0) !important;
+}
+
+a .icon-bell {
+    background: url("../img/bell.png") no-repeat scroll rgba(0, 0, 0, 0) !important;
+}
+
+.navbar-right .global-btn:hover a .icon-phone {
+    background: url("../img/cmi_webicon_sprite.png") no-repeat scroll -70px -1130px rgba(0, 0, 0, 0) !important;
+}
+
+.navbar-right .global-btn:hover a .icon-community,
+.navbar-right .open .global-btn a .icon-community {
+    background: url("../img/cmi_webicon_sprite.png") no-repeat scroll -70px -2571px rgba(0, 0, 0, 0) !important;
+}
+
+.navbar-right .open {
+    background: #333;
+}
+
+.navbar-right .global-btn a {
+    color: #fff;
+    padding: 10px 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.navbar-right .global-btn .icon-phone {
+    color: #999999;
+    padding: 10px 10px 10px 0px;
+    font-size: 16px;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.navbar-right .global-btn .icon-phone {
+    background: url("../img/cmi_webicon_sprite.png") no-repeat scroll -40px -1130px rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 20px;
+    margin: 1px 0px 10px 10px;
+    position: relative;
+    float: left;
+    width: 22px;
+}
+
+.navbar-right .global-btn .icon-globe {
+    background: url("../img/cmi_webicon_sprite.png") no-repeat scroll -40px -1910px rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 20px;
+    margin: 1px 0px 10px 10px;
+    position: relative;
+    float: left;
+    width: 22px;
+}
+
+.navbar-right .global-btn .icon-community {
+    background: url("../img/cmi_webicon_sprite.png") no-repeat scroll -40px -2571px rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 20px;
+    margin: 1px 0px 10px 10px;
+    position: relative;
+    float: left;
+    width: 22px;
+}
+
+.navbar-right .phone-btn,
+.navbar-right .globe-btn,
+.navbar-right .community-btn {
+    height: 35px;
+    padding-right: 10px;
+}
+
+.navbar-right .dropdown-menu {
+    min-width: 110px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-right .dropdown-menu li {
+    background-color: #fff;
+    border-bottom: solid 1px #ccc;
+}
+
+.navbar-right .dropdown-menu li:hover {
+    background-color: #007c7c;
+}
+
+.navbar-right .dropdown-menu li a {
+    padding: 10px;
+    text-align: left;
+    color: #666;
+    font-size: 13px/15px;
+}
+
+.navbar-right .dropdown-menu li a:hover {
+    color: #fff;
+    background-color: #007c7c;
+}
+
+.navbar-right .dropdown-menu li:last-child {
+    border-bottom: solid 2px #666;
+}
+
+body {
+    background-color: #d02323;
+}
+
+.navbar-right .btn-group .dropdown-menu {
+    right: 0;
+    left: inherit;
+}
+
+@media only screen and (max-width: 750px) {
+    .navbar-right {
+        float: right !important;
+    }
+    .navbar-right .global-btn .icon-community,
+    .navbar-right .global-btn .icon-globe,
+    .navbar-right .global-btn .icon-phone {
+        padding: 10px 0px;
+    }
+    .navbar-right .community-btn {
+        padding-right: 0px;
+    }
+    .navbar-right .phone-btn a,
+    .navbar-right .globe-btn a,
+    .navbar-right .community-btn a {
+        padding-right: 0px;
+    }
+    .navbar-right .phone-btn a,
+    .navbar-right .globe-btn a {
+        padding-left: 0px;
+    }
+}
+
+
+/*
+Banner Navigation Component Stylesheet
+Cummins UX Standards Template
+(C)2015 Cummins Inc., Box 3005, Columbus, IN 47202-3005 U.S.A.
+For questions, UI standards and more contact the Cummins UX Team
+*/
+
+body {
+    background: none repeat scroll 0 0 #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background: linear-gradient(to bottom, #dc2028 0%, #af0d1f 100%);
+    font-size: 13px;
+}
+
+.navbar-header {
+    float: none;
+    max-height: 40px;
+}
+
+.logo {
+    display: inline-block;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.logo a:hover .sub-brand h2 {
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.35);
+}
+
+.logo a:hover .logo_img img {
+    -webkit-filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.35));
+    filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.35));
+}
+
+.logo_img {
+    display: inline-block;
+    padding: 12px 35px 12px 30px;
+    float: left;
+}
+
+.sub-brand h2 {
+    color: #fff;
+    margin: 0;
+    font-size: 21px;
+    line-height: 23px;
+}
+
+.sub-brand {
+    padding: 12px 0px 0px 0px;
+    width: 210px;
+    display: inline-block;
+}
+
+.main_menu {
+    display: inline-block;
+    font-family: sans-serif;
+    position: relative;
+    /*right: -25%;*/
+    /*bottom: 28px;*/
+    z-index: 99;
+    top: 46px;
+}
+
+.main_menu>ul {
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav li {
+    float: left;
+    list-style: outside none none;
+    position: relative;
+    
+}
+
+#nav>li>a {
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.3s ease 0s;
+}
+
+#topnav {
+    display: contents;
+}
+
+#topnav li {
+    float: left;
+    list-style: outside none none;
+    position: relative;
+    border-bottom: 1px solid rgb(206 206 206);
+}
+
+#topnav>li>a {
+    /* color: #fff; */
+    padding: 0px 5px;
+    text-decoration: none;
+    font-size: 11px;
+    text-transform: capitalize;
+    transition: all 0.3s ease 0s;
+}
+
+#topnav .divider {
+    /* border-right: 1px solid rgb(206 206 206); */
+    /* border-bottom: 1px solid rgb(206 206 206); */
+    height: 20px;
+}
+#topnav>li:hover>a {
+    background: none repeat scroll 0 0 #ccc;
+}
+
+#nav>li>a>#notifications-number {
+    position: absolute;
+    margin-left: 18px;
+    padding: 1px 7px;
+    border-radius: 50px;
+    BACKGROUND-COLOR: black;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+}
+
+#nav>li:hover>a {
+    background: none repeat scroll 0 0 #840909;
+}
+
+#nav>li:last-child {
+    border: 0px;
+}
+
+#nav img {
+    width: 11px;
+}
+
+#nav li>ul {
+    background: none repeat scroll 0 0 #fff;
+    box-shadow: 6px 6px 5px -4px #666;
+    display: none;
+    padding: 0;
+    position: absolute;
+    top: 27px;
+}
+
+#nav li:hover ul {
+    display: block;
+}
+
+#nav li ul li {
+    border: 1px solid #cccccc;
+}
+
+#nav li ul li a {
+    color: #333;
+    display: table;
+    padding: 10px 26px 10px 10px;
+    text-decoration: none;
+    width: 165px;
+}
+
+#nav li ul li:hover a {
+    background: #007C7C;
+    color: #fff;
+}
+
+#nav .divider {
+    border-right: 1px solid #e48f92;
+    height: 20px;
+}
+
+#nav .divider.border-hidden {
+    border-right: 1px solid transparent;
+}
+
+#nav li a span.caret1 {
+    display: none;
+    position: absolute;
+    left: 5px;
+    width: 10px;
+    height: 16px;
+    background: url("../img/cmi_webicon_sprite.png") no-repeat scroll -35px -1791px;
+    background-size: 125px 2130px;
+}
+
+#nav li a span.caret1 img {
+    width: 7px;
+}
+
+#nav li a span.banner-caret-down {
+    display: inline !Important;
+}
+
+.nav-active {
+    background-color: #840909;
+}
+
+#nav li.no-right-border {
+    border-right: 1px solid transparent;
+}
+
+
+/** Search Styles **/
+
+.search-container,
+.responsive-search-container {
+    width: 40px;
+    height: 35px;
+    float: right;
+}
+
+.search-btn {
+    position: relative;
+    top: -7px;
+    right: 27px;
+}
+
+.search-container .search,
+.responsive-search-container .search {
+    background: #840909;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    padding: 8px 14px 10px;
+    position: absolute;
+    text-decoration: none;
+    bottom: 16px;
+    height: 35px;
+    width: 40px;
+    display: inline-block;
+    margin-bottom: -8px;
+}
+
+
+/*#searchSite input:focus + .results {
+    display: block;
+}*/
+
+#searchSite .results {
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    top: 29px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+    border-width: 1px 1px 2px;
+    border-style: solid;
+    border-color: #cccccc #cccccc #666;
+    border-radius: 3px;
+    background-color: #fff;
+    -webkit-box-shadow: 6px 6px 5px -4px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 6px 6px 5px -4px rgba(0, 0, 0, 0.35);
+    -ms-box-shadow: 6px 6px 5px -4px rgba(0, 0, 0, 0.35);
+    -o-box-shadow: 6px 6px 5px -4px rgba(0, 0, 0, 0.35);
+    box-shadow: 6px 6px 5px -4px rgba(0, 0, 0, 0.35);
+}
+
+#searchSite .results li {
+    border-bottom: 1px solid #cccccc;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+#searchSite .results li:hover,
+#searchSite .results li:hover a {
+    background-color: #007c7c;
+    color: #fff;
+}
+
+#searchSite .results li a {
+    color: #333;
+    text-decoration: none;
+    font-family: "Helvetica Neue 55", Arial, sans-serif;
+    font-size: 13px;
+    display: block;
+    line-height: 15px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+#searchSite .results li a:hover {
+    color: #fff;
+}
+
+.search_icon {
+    background: none repeat scroll 0 0 #840909;
+    color: #fff;
+    cursor: pointer;
+    display: table;
+    padding: 7px 13px;
+    right: 54px;
+    top: -6px;
+}
+
+.search-open {
+    right: 0;
+    top: 27px;
+    display: none;
+    padding: 0;
+    position: absolute;
+    border-top: 0;
+    z-index: 99999;
+    zoom: 1;
+}
+
+.search-open form {
+    background-color: #840909;
+    padding: 4px;
+    border-radius: 3px !important;
+}
+
+.search-open input {
+    background-color: #fff;
+    border: 0;
+    border-radius: 3px !important;
+    color: #000000;
+    margin: 0;
+}
+
+.icon-search {
+    background: url("../img/cmi_webicon_sprite.png") no-repeat scroll -63px -2145px;
+    display: inline-block;
+    height: 34px;
+    margin: 0px 0px 10px 10px;
+    position: relative;
+    float: left;
+    width: 35px;
+}
+
+.searchicon input {
+    padding-left: 10px;
+    padding-right: 25px;
+    padding-top: 3px;
+}
+
+.searchicon:before {
+    right: 12px;
+    top: 6px;
+    content: "";
+    width: 15px;
+    height: 16px;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    position: absolute;
+    background: url("../img/cmi_webicon_sprite.png") no-repeat scroll -25px -1438px;
+    background-size: 167px 2854px;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+.icon-remove:before {
+    content: "";
+}
+
+.icon-remove {
+    background: url("../img/cmi_webicon_sprite.png") no-repeat scroll -68px -48px;
+    display: inline-block;
+    height: 25px;
+    float: left;
+    width: 25px;
+    font-family: inherit;
+    position: absolute;
+    top: auto !important;
+    left: auto !important;
+    bottom: 5px;
+    right: 7px!important;
+}
+
+
+/** Responsive Menu CSS **/
+
+.rmm ul li ul {
+    background: #fff;
+    display: none !important;
+}
+
+
+/* TJG MODIFIED
+.rmm ul li:hover ul {
+    display: block !important;
+}
+.rmm li ul li:hover a {
+    background: #007C7C;
+    color: #fff;
+}
+*/
+
+.rmm ul li.open ul {
+    display: block !important;
+}
+
+.rmm li ul li.open a {
+    background: #007C7C;
+    color: #fff;
+}
+
+
+/* END TJG MODIFIED */
+
+.rmm li ul li a {
+    color: #333;
+    display: table;
+    padding: 10px 26px;
+    text-decoration: none;
+    width: 165px;
+}
+
+.rmm li ul li:hover a {
+    background: #007C7C;
+    color: #fff;
+}
+
+.rmm li li:last-child {
+    border-bottom: 2px solid #666;
+}
+
+.rmm {
+    display: block;
+    line-height: 19px !important;
+    margin: auto auto auto 341px;
+    padding: 0;
+    text-align: center;
+    width: 165px;
+    position: absolute;
+    top: 0;
+}
+
+.rmm * {
+    -webkit-tap-highlight-color: transparent !important;
+    font-family: 'Helvetica Neue 65', Arial, sans-serif;
+    font-weight: 500;
+}
+
+.rmm a {
+    color: #ebebeb;
+    text-decoration: none;
+}
+
+.rmm .rmm-main-list,
+.rmm .rmm-main-list li {
+    margin: 0px;
+    padding: 0px;
+}
+
+.rmm ul {
+    display: block;
+    width: 166px !important;
+    /*width:auto!important;*/
+    margin: 0 auto !important;
+    overflow: hidden;
+    list-style: none;
+    background: none repeat scroll 0 0 #d02323;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+}
+
+.box-shadow {
+    position: absolute;
+    margin: 100px;
+    -webkit-box-shadow: 6px 6px 5px -4px #666;
+    -moz-box-shadow: 6px 6px 5px -4px #666;
+    box-shadow: 6px 6px 5px -4px #666;
+}
+
+.rmm .rmm-main-list li {
+    display: inline;
+    padding: 0px;
+    margin: 0px !important;
+}
+
+.rmm-toggled {
+    display: none;
+    overflow: hidden;
+    margin: 0 auto !important;
+}
+
+.rmm-button:hover {
+    cursor: pointer;
+}
+
+.rmm .rmm-toggled ul {
+    display: none;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.rmm .rmm-toggled ul li {
+    display: block;
+}
+
+.rmm .rmm-toggled ul li ul li a:hover {
+    display: block;
+    background-color: #007c7c;
+    color: #fff;
+}
+
+
+/** Minimal Style **/
+
+.rmm.minimal a {
+    color: #333;
+}
+
+.rmm.minimal a:hover {
+    background-color: #840909;
+}
+
+.rmm.minimal .rmm-main-list li a {
+    display: inline-block;
+    padding: 8px 30px 8px 30px;
+    margin: 0px -3px 0px -3px;
+    font-size: 15px;
+}
+
+.rmm.minimal .rmm-toggled {
+    min-height: 36px;
+}
+
+.rmm.minimal .rmm-toggled-controls {
+    display: block;
+    height: 36px;
+    color: #333;
+    text-align: left;
+}
+
+.rmm.minimal .rmm-toggled-title {
+    position: relative;
+    top: 9px;
+    left: 9px;
+    font-size: 16px;
+    color: #333;
+}
+
+.rmm.minimal .rmm-button {
+    background: url("../img/cmi_webicon_sprite.png") no-repeat scroll -60px -2203px #840909;
+    display: block;
+    padding: 6px 8px;
+    position: absolute;
+}
+
+.rmm.minimal .rmm-button span {
+    display: block;
+    margin: 4px 0px 4px 0px;
+    height: 2px;
+    background: #fff;
+    width: 25px;
+}
+
+.rmm.minimal .rmm-toggled ul li a {
+    font-family: 'Helvetica Neue 65', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    color: #fff;
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px 10px 10px 10px;
+    border-bottom: 2px solid #666;
+}
+
+.sub-cat li a {
+    padding: 10px 20px !important;
+}
+
+
+/* Media Queries */
+
+@media all and (max-width: 1027px) {
+    .main_menu {
+        margin-left: -31px;
+        top: 47px;
+    }
+    #nav>li>a {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .mobile_menu {
+        display: none;
+    }
+    .rmm {
+        display: none !important;
+    }
+}
+
+@media all and (max-width: 1023px) {
+    .main_menu #nav {
+        display: none;
+    }
+    .search_icon {
+        left: 665px;
+        top: 51px;
+        position: absolute;
+    }
+    .search-open {
+        margin-right: 0px;
+    }
+    .responsive-search-container {
+        position: absolute;
+        top: 82px;
+        right: 20px;
+        display: block !important;
+    }
+    .search-btn {
+        top: -6px;
+        right: 22px;
+    }
+    #nav li {
+        border-right: 1px solid #fdf6f6;
+        float: none;
+        list-style: outside none none;
+        position: relative;
+    }
+    .rmm {
+        display: block !important;
+    }
+    .rmm.minimal .rmm-toggled-controls {
+        height: 74px !important;
+    }
+    .rmm-button {
+        top: 39px;
+        right: 0;
+        width: 40px;
+        height: 35px;
+    }
+    .has-subnav .sub-cat {
+        background: none repeat scroll 0 0 #fff;
+    }
+    .minimal {
+        position: absolute;
+        right: 70px;
+        z-index: 99;
+    }
+    .search-mobile {
+        position: absolute;
+    }
+    .rmm.minimal .rmm-toggled-title {
+        display: none;
+    }
+    .rmm.minimal .rmm-toggled ul>li>a {
+        color: #fff;
+    }
+    .rmm.minimal .rmm-toggled ul ul li a {
+        color: #666;
+    }
+}
+
+@media all and (max-width: 750px) {
+    .navbar-header {
+        max-height: 75px;
+    }
+}
+
+@media all and (max-width: 727px) {
+    .search_icon {
+        left: 574px !important;
+    }
+}
+
+@media all and (max-width: 620px) {
+    .rmm {
+        margin: auto auto auto 88px !important;
+    }
+    .search_icon {
+        left: 432px !important;
+    }
+}
+
+@media all and (max-width: 473px) {
+    .rmm {
+        margin: auto auto auto 67px !important;
+    }
+    .search_icon {
+        left: 358px !important;
+    }
+}
+
+@media all and (max-width: 400px) {
+    .sub-brand {
+        width: 135px;
+    }
+    .rmm-button {
+        top: 39px;
+        right: 0;
+        width: 40px;
+        height: 35px;
+    }
+    .minimal {
+        position: absolute;
+        right: 70px;
+    }
+    .search-container {
+        position: absolute;
+        top: 47px;
+        right: 20px;
+    }
+    .logo_img {
+        display: inline-block;
+        padding: 12px 20px 12px 15px;
+        float: left;
+    }
+    .logo_text {
+        width: 139px !important;
+    }
+    .search_icon {
+        left: 269px !important;
+    }
+}
+
+@media (min-width: 971px) and (max-width: 992px) {
+    #nav>li>a:not(.search) {
+        padding-left: 0.44em;
+        padding-right: 0.44em;
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 970px) {
+    #nav {
+        min-width: 495px;
+    }
+    .main_menu {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #nav>li>a:not(.search) {
+        padding-left: 0.25em;
+        padding-right: 0.25em;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 320px) {
+    .logo_img {
+        padding-left: 0px;
+        padding-right: 5px;
+    }
+    .sub-brand {
+        width: 115px;
+    }
+    .sub-brand h2 {
+        font-size: 17px;
+        line-height: 19px;
+    }
+}
+
+
+/*
+Breadcrumb Component Component Stylesheet
+Cummins UX Standards Template
+(C)2015 Cummins Inc., Box 3005, Columbus, IN 47202-3005 U.S.A.
+For questions, UI standards and more contact the Cummins UX Team
+*/
+
+.breadcrumb-component {
+    background-color: #eeeeee;
+    /* margin-bottom: 30px; */
+    margin-bottom: 0px;
+}
+
+
+.breadcrumb-component .btn-default {
+    font-family: 'Helvetica Neue 55', Arial, sans-serif;
+    font-weight: 300;
+    color: #007c7c;
+    border-bottom: 1px solid #C3C3C3 !important;
+    background-color: #eeeeee;
+}
+
+.breadcrumb-component .btn-group a div {
+    border-bottom: 1px solid #C3C3C3;
+}
+
+.breadcrumb-component .btn-group a:last-child {
+    color: #666;
+}
+
+.breadcrumb-component .btn-group a:last-child div {
+    border-bottom: 0px;
+}
+
+.breadcrumb-component .btn-group .btn>div {
+    margin-left: 5px;
+}
+
+.breadcrumb-component .btn-group .active div {
+    border-bottom: 0px !important;
+}
+
+.breadcrumb-component .active {
+    color: #666;
+    box-shadow: none;
+}
+
+.breadcrumb-component .row .btn-group>.btn:hover {
+    z-index: inherit !important;
+}
+
+.btn-breadcrumb .btn:not(:last-child):after {
+    content: " ";
+    display: block;
+    border: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -17px;
+    left: 100%;
+    z-index: 3;
+}
+
+.btn-breadcrumb .home:before {
+    content: " ";
+}
+
+.btn-breadcrumb .btn:not(:last-child):before {
+    content: url("  ");
+    background: url("../img/cmi_webicon_sprite.png") no-repeat scroll -44px -4160px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 0;
+    position: absolute;
+    left: 100%;
+    z-index: 3;
+}
+
+.btn-breadcrumb .btn {
+    padding: 10px;
+    border: 0px !important;
+    border-radius: 0px !important;
+}
+
+.btn-breadcrumb .btn:hover {
+    color: black;
+}
+
+.btn-breadcrumb .btn:first-child {
+    padding-left: 0px;
+}
+
+.btn-breadcrumb .btn {
+    margin-left: 5px;
+}
+
+.breadcrumb-component .btn-group>.btn:first-child {
+    margin-left: 30px;
+}
+
+.breadcrumb-component .btn-group .home div {
+    margin-left: 0px;
+}
+
+
+/** Default button **/
+
+.btn-breadcrumb .btn.btn-default:not(:last-child):after {
+    border: 0;
+}
+
+.btn-breadcrumb .btn.btn-default:not(:last-child):before {
+    border: 0;
+}
+
+.btn-breadcrumb .btn.btn-default:hover:not(:last-child):after {
+    border: 0;
+}
+
+.btn-breadcrumb .btn.btn-default:hover:not(:last-child):before {
+    border: 0;
+}
+
+
+/* The responsive part */
+
+.btn-breadcrumb>*>div {
+    /* With less: .text-overflow(); */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn-breadcrumb>*:nth-child {
+    display: none;
+}
+
+.btn-breadcrumb>*:nth-child(n+1) {
+    display: none;
+}
+
+
+/* Make last Breadcrumb INACTIVE link */
+
+.not-active {
+    pointer-events: none;
+    cursor: default;
+}
+
+
+/* === For phones =================================== */
+
+@media (max-width: 320px) {
+    .breadcrumb-component {
+        margin-bottom: 20px;
+    }
+    .breadcrumb-component .container {
+        padding-left: 0px;
+    }
+    .breadcrumb-component .btn-group>.btn:first-child {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 767px) {
+    .btn-breadcrumb>*:nth-last-child(-n+2) {
+        display: block;
+    }
+    .btn-breadcrumb>* div {
+        max-width: 60px;
+    }
+    .btn-breadcrumb>*:nth-child(2):not(:last-child) div:before {
+        content: "...";
+        float: left;
+    }
+}
+
+
+/* === For tablets ================================== */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .btn-breadcrumb>*:nth-last-child(-n+4) {
+        display: block;
+    }
+    .btn-breadcrumb>* div {
+        max-width: 200px;
+    }
+}
+
+
+/* === For desktops ================================== */
+
+@media (min-width: 992px) {
+    .btn-breadcrumb>*:nth-last-child(-n+3) {
+        display: block;
+    }
+    .btn-breadcrumb>* div {
+        max-width: 200px;
+    }
+}
+
+
+/*
+Left Navigation Component Stylesheet
+Cummins UX Standards Template
+(C)2015 Cummins Inc., Box 3005, Columbus, IN 47202-3005 U.S.A.
+For questions, UI standards and more contact the Cummins UX Team
+*/
+
+.left-navigation {
+    border-top: 2px solid #666;
+    border-bottom: 2px solid #666;
+    position: relative;
+    /** customized **/
+    left: -40px;
+    /** customized **/
+}
+
+#left-nav {
+    list-style: none;
+    padding: 0 0 0 0;
+    width: 100%;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+#left-nav li {
+    font-family: 'Helvetica Neue 65', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    margin: 0;
+    color: #000000;
+    border-bottom: 1px solid #999999;
+    border-top: 1px solid #999999;
+    cursor: pointer;
+}
+
+#left-nav li:first-child {
+    border-top: 0px;
+}
+
+#left-nav li:last-child {
+    border-bottom: 0px;
+}
+
+#left-nav a:after {
+    /* symbol for "opening" panels */
+    content: "";
+    /*adjust as needed, taken from bootstrap.css */
+    background: url("../img/cmi_webicon_sprite.png") no-repeat scroll;
+    background-size: 167px 2854px;
+    background-repeat: no-repeat;
+    float: left;
+    /* adjust as needed */
+    padding-right: 25px;
+    width: 17px;
+    height: 17px;
+    background-position: -141px -194px;
+}
+
+#left-nav a:hover:after {
+    /* symbol for "opening" panels */
+    background: url("../img/cmi_webicon_sprite.png") no-repeat scroll;
+    background-size: 167px 2854px;
+    background-position: -40px -194px;
+}
+
+#left-nav ul {
+    list-style: none;
+    padding: 0 0 0 0;
+}
+
+#left-nav ul {
+    display: none;
+}
+
+#left-nav ul li {
+    font-family: 'Helvetica Neue 55', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    color: #333;
+    padding: 10px 10px 10px 35px;
+    border-bottom: 1px solid #fff;
+    background-color: #e2e2e2;
+}
+
+#left-nav a {
+    font-family: 'Helvetica Neue 55', Arial, sans-serif;
+    font-weight: 300;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0 10px 0;
+}
+
+#left-nav ul li:hover {
+    /*border-top:1px solid #666;*/
+    border-bottom: 1px solid #666;
+}
+
+#left-nav li:hover,
+#left-nav li:hover a,
+#left-nav li div:hover,
+#left-nav ul li.active:hover,
+#left-nav ul li:hover,
+#left-nav ul li:hover a {
+    background-color: #007c7c;
+    text-decoration: none;
+    color: #fff;
+}
+
+#left-nav ul li:active {
+    color: #333;
+    background-color: #fff;
+    text-decoration: none;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+}
+
+
+/*
+REPLACED
+#left-nav ul li.active {
+    color: #333;
+    background-color: #eee;
+    text-decoration: none;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+}*/
+
+#left-nav li.active a {
+    color: #FFF;
+}
+
+#left-nav li.active a:after {
+    background: url("../img/cmi_webicon_sprite.png") no-repeat scroll;
+    background-size: 167px 2854px;
+    background-position: -40px -194px;
+}
+
+#left-nav li.active {
+    background-color: #007c7c;
+    text-decoration: none;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+}
+
+@media (max-width: 320px) {
+    .l-n {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+}
+
+@media (min-width: 750px) {
+    .l-n {
+        padding-left: 30px;
+        padding-right: 5px;
+    }
+}
+
+
+/*
+Fat Footer Component Stylesheet
+Cummins UX Standards Template
+(C)2015 Cummins Inc., Box 3005, Columbus, IN 47202-3005 U.S.A.
+For questions, UI standards and more contact the Cummins UX Team
+*/
+
+.large-padding div:last-child {
+    padding-right: 20px;
+}
+
+.large-padding div:first-child {
+    padding-left: 30px;
+    padding-bottom: 15px;
+}
+
+.ff-column {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.fat-footer h4 {
+    font-family: 'Helvetica Neue 75', Arial, sans-serif;
+    font-weight: 700;
+    border-bottom: 2px solid #fff;
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0;
+    padding: 60px 0 10px 0;
+    color: #fff;
+    /* white-space: nowrap; */
+}
+
+.fat-footer a {
+    display: block;
+}
+
+.fat-footer a:hover {
+    color: #fff;
+}
+
+.fat-footer .dl-horizontal {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 0px;
+}
+
+.fat-footer .dl-horizontal li {
+    font-family: 'Helvetica Neue 65', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.fat-footer .dl-horizontal li:hover,
+.fat-footer .dl-horizontal a:hover {
+    background-color: #333;
+    text-decoration: none;
+}
+
+.fat-footer .dl-horizontal li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 10px;
+    line-height: 15px;
+}
+
+
+/** Mobile Footer Styling **/
+
+.fat-footer .panel-group .panel-default {
+    border: none;
+    box-shadow: none;
+}
+
+.fat-footer .panel-group .panel {
+    background-color: #000000;
+    border: none;
+    box-shadow: none;
+    margin-top: 0px;
+}
+
+.fat-footer .panel-group .panel .panel-collapse .panel-body {
+    padding: 0px 20px;
+}
+
+.fat-footer .panel-group .panel .panel-heading {
+    background-color: #000000;
+    border: none !important;
+}
+
+.fat-footer .panel-group .panel .panel-collapse .panel-body {
+    border: none !important;
+}
+
+.fat-footer .panel-group .panel .panel-heading {
+    padding: 0px 0px;
+}
+
+.fat-footer .panel-group .panel .panel-heading .panel-title:hover {
+    background-color: #333;
+}
+
+.fat-footer .panel-group .panel .panel-heading h4 {
+    padding: 10px 0px;
+}
+
+.fat-footer .panel-group .panel .panel-heading .panel-title a:hover {
+    text-decoration: none;
+}
+
+.panel-heading .accordion-toggle:focus {
+    /*remove underline in IE*/
+    text-decoration: none;
+}
+
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    content: "";
+    /*adjust as needed, taken from bootstrap.css */
+    background: url("../img/cmi_webicon_sprite.png") no-repeat scroll;
+    background-size: 167px 2854px;
+    background-repeat: no-repeat;
+    float: left;
+    /* adjust as needed */
+    padding-right: 25px;
+    width: 15px;
+    height: 17px;
+}
+
+.panel-heading .accordion-toggle.collapsed:after {
+    background-position: -45px -192px;
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+    margin-top: 0;
+}
+
+.panel-heading .accordion-toggle:after {
+    background-position: -45px -192px;
+    -ms-transform: rotate(90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(90deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+    margin-top: 5px;
+}
+
+@media only screen and (max-width: 750px) {
+    .fat-footer .dl-horizontal li a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 10px 10px 10px 25px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .fat-footer a:hover {
+        text-decoration: none;
+    }
+    .fat-footer {
+        padding-top: 30px;
+    }
+    .fat-footer #accordion {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .fat-footer h4 {
+        padding: 50px 0 10px 0;
+    }
+    .panel-body {
+        padding: 0px;
+    }
+    .fat-footer .panel-group .panel .panel-collapse .panel-body {
+        padding: 0px 0px;
+    }
+}
+
+
+/*
+Social Media Footer Component Stylesheet
+Cummins UX Standards Template
+(C)2015 Cummins Inc., Box 3005, Columbus, IN 47202-3005 U.S.A.
+For questions, UI standards and more contact the Cummins UX Team
+*/
+
+.social-media-footer-padding {
+    padding-right: 0px;
+}
+
+.social-media-footer {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    height: 40px;
+}
+
+.social-media-footer li {
+    display: inline-block;
+    padding: 9px 7.5px;
+}
+
+.social-media-footer li a {
+    text-decoration: none;
+}
+
+
+/** Social Media Icons **/
+
+.twitter-footer {
+    width: 22px;
+    height: 22px;
+    text-decoration: none;
+    display: block;
+    background: url("../img/cmi_webicon_sprite.png") no-repeat scroll -70px -1280px;
+}
+
+.twitter-footer:hover,
+.twitter-footer:hover {
+    background-position: -220px -1280px;
+}
+
+.facebook-footer {
+    width: 22px;
+    height: 22px;
+    text-decoration: none;
+    display: block;
+    background: url("../img/cmi_webicon_sprite.png") no-repeat scroll -70px -1220px;
+}
+
+.facebook-footer:hover,
+.facebook-footer:active {
+    background-position: -220px -1220px;
+}
+
+.youtube-footer {
+    width: 22px;
+    height: 22px;
+    text-decoration: none;
+    display: block;
+    background: url("../img/cmi_webicon_sprite.png") no-repeat scroll -70px -1340px;
+}
+
+.youtube-footer:hover,
+.youtube-footer:active {
+    background-position: -220px -1340px;
+}
+
+
+/*
+Global Footer Component Stylesheet
+Cummins UX Standards Template
+(C)2015 Cummins Inc., Box 3005, Columbus, IN 47202-3005 U.S.A.
+For questions, UI standards and more contact the Cummins UX Team
+*/
+
+.global-footer-logo {
+    padding: 10px 25px 10px 0px;
+}
+
+.global-footer-copy {
+    font-family: 'Helvetica Neue 55', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    color: #cccccc;
+    line-height: 15px;
+    position: absolute;
+    bottom: 7px;
+    padding-left: 0px;
+}
+
+.global-footer-links {
+    font-family: 'Helvetica Neue 55', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    color: #cccccc;
+    line-height: 20px;
+    text-align: right;
+    position: relative;
+    top: 36px;
+}
+
+.global-footer-links a {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0 10px;
+}
+
+.global-footer-links a:hover {
+    border-bottom: 1px solid white;
+}
+
+.mobile-footer-links {
+    font-family: 'Helvetica Neue 55', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    color: #fff;
+    line-height: 30px;
+    text-transform: uppercase;
+    padding-left: 50px;
+    white-space: nowrap;
+    width: 100% !important;
+    padding-right: 0px;
+}
+
+.mobile-footer-links:hover {
+    color: #fff;
+}
+
+.mobile-footer-copy {
+    font-family: 'Helvetica Neue 55', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    color: #cccccc;
+    line-height: 15px;
+    position: absolute;
+    bottom: 7px;
+}
+
+.eprivacy {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    margin-left: -7px;
+}
+
+.ePrivacy-icon-mobile {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+@media only screen and (max-width: 320px) {
+    .global-footer-logo {
+        padding: 10px 10px 10px 5px;
+    }
+    .mobile-footer-links {
+        padding-left: 40px;
+    }
+}
+
+@media (min-width: 751px) and (max-width: 930px) {
+    .global-footer-links a {
+        padding: 7px;
+        font-size: 1em;
+    }
+}
+
+
+/*
+In-Page Carousel Component Stylesheet
+Cummins UX Standards Template
+(C)2015 Cummins Inc., Box 3005, Columbus, IN 47202-3005 U.S.A.
+For questions, UI standards and more contact the Cummins UX Team
+*/
+
+.carousel {
+    background-color: #eeeeee;
+    border-bottom: 2px solid #d02323;
+    border-top: 1px solid #cccccc;
+    margin-bottom: 50px;
+}
+
+.ipc-img {
+    padding: 10px 5px 10px 10px;
+}
+
+.ipc-caption {
+    padding: 10px 10px 10px 5px;
+}
+
+.ipc-caption a {
+    color: #007c7c;
+    border-bottom: 1px solid #cccccc;
+    text-decoration: none;
+}
+
+.ipc-caption a:hover {
+    color: #003333;
+}
+
+.carousel-indicators {
+    position: absolute;
+    top: 103.5%;
+}
+
+.carousel-indicators li {
+    height: 15px;
+    width: 15px;
+    border: 3px solid #999999;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+}
+
+.carousel-indicators .active {
+    height: 15px;
+    width: 15px;
+    background-color: #999999;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+}
+
+.carousel-indicators li:hover {
+    background-color: #d02323;
+    border: 3px solid #d02323;
+}
+
+.carousel-control.left {
+    background: url("../img/cmi_webicon_sprite.png") no-repeat scroll -22px -191px #ccc;
+    background-size: 167px 2854px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50% !important;
+    top: 103.5%;
+    -ms-transform: rotate(180deg);
+    /* IE 9 */
+    -webkit-transform: rotate(180deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+
+.carousel-control.right {
+    background: url("../img/cmi_webicon_sprite.png") no-repeat scroll -22px -191px #ccc;
+    background-size: 167px 2854px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50% !important;
+    top: 103.5%;
+}
+
+
+/*
+Contact Form Component Stylesheet
+Cummins UX Standards Template
+(C)2015 Cummins Inc., Box 3005, Columbus, IN 47202-3005 U.S.A.
+Questions or comments: karen.falkner@cummins.com
+*/
+
+#contact-form .contact-form-main {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#contact-form .contact-form-info {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#contact-form h1 {
+    border-bottom: 2px solid #006666;
+    color: #000000;
+    margin-top: 0;
+}
+
+#contact-form .dropdown .btn {
+    padding: 3px 10px;
+    border-radius: 3px;
+    border-color: #cccccc;
+    text-align: left;
+    color: #666;
+    font-family: "Helvetica Neue 56", Arial, sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+#contact-form .dropdown .btn:focus {
+    font-style: normal;
+    box-shadow: 0 0 5px #007c7c;
+}
+
+#contact-form .dropdown .btn:hover,
+#contact-form .dropdown .btn:active {
+    background-color: #fff;
+}
+
+#contact-form .contact-form-left {
+    margin-left: 0px;
+}
+
+#contact-form .contact-form-left .form-group,
+#contact-form .contact-form-right .form-group {
+    margin-bottom: 20px;
+    padding: 0px;
+}
+
+#contact-form .contact-form-left,
+#contact-form .contact-form-right,
+#contact-form .contact-form-bottom {
+    border: 1px solid #999999;
+    background-clip: content-box;
+    padding: 0px;
+}
+
+#contact-form .form-group div {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+#contact-form .form-group label {
+    top: 5px;
+    margin-right: 0px;
+    padding-right: 0px;
+    text-align: right;
+}
+
+#contact-form .details {
+    margin-bottom: 30px;
+}
+
+#contact-form .radio-title,
+#contact-form .checkbox-title,
+#contact-form .details label {
+    font-family: "Helvetica Neue 55", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 15px;
+    margin-top: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    white-space: nowrap;
+    text-align: right;
+}
+
+#contact-form .radio-buttons .required,
+#contact-form .checkboxes .required,
+#contact-form .details .required {
+    font-family: "Helvetica Neue 55", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #D02323;
+    padding-top: 10px;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#contact-form .radio-buttons .radio-holder,
+#contact-form .checkboxes .checkbox-holder {
+    padding-left: 0px;
+}
+
+#contact-form .details .details-input {
+    padding-left: 0px;
+}
+
+
+/*
+#contact-form .checkbox-title:after,
+#contact-form .radio-title:after{
+    content:"*";
+    font-family: "Helvetica Neue 55", Arial, sans-serif;
+    font-weight:400;
+    font-size:13px;
+    color:#D02323;
+    padding-left:10px;
+    padding-right:10px;
+    clear:left;
+}*/
+
+#contact-form .form-group .required {
+    font-family: "Helvetica Neue 55", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #D02323;
+    padding-right: 0px;
+    top: 5px;
+}
+
+#contact-form input {
+    font-family: "Helvetica Neue 56", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 15px;
+    color: #333333;
+}
+
+#contact-form input[type="text"] {
+    font-family: "Helvetica Neue 55", Arial, sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    color: #333333;
+}
+
+button[aria-expanded="false"] {
+    font-style: normal!important;
+    color: #333333!important;
+}
+
+::-webkit-input-placeholder {
+    color: #666;
+    font-style: italic;
+}
+
+
+/*Chrome */
+
+:-moz-placeholder {
+    color: #666;
+    font-style: italic;
+}
+
+
+/*ff*/
+
+:-ms-input-placeholder {
+    color: #666;
+    font-style: italic;
+}
+
+
+/*ie latest */
+
+#contact-form input[type="text"]:focus {
+    font-family: "Helvetica Neue 55", Arial, sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+    font-style: normal;
+}
+
+#contact-form .form-control:focus {
+    box-shadow: 0 0 5px #007c7c;
+}
+
+#contact-form .dropdown .btn .caret {
+    position: absolute;
+    right: 23px;
+    top: 12px;
+}
+
+#contact-form .dropdown button[aria-selected="false"] {
+    font-style: normal!important;
+}
+
+#contact-form label {
+    font-family: "Helvetica Neue 55", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: #333333;
+}
+
+#contact-form option:hover {
+    background-color: #007C7C;
+    color: #fff;
+}
+
+#contact-form span.fieldset-label {
+    font-family: "Helvetica Neue 75", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    color: #333333;
+    background-color: #eeeeee;
+    position: relative;
+    left: 10px;
+    bottom: 13px;
+    padding: 5px;
+}
+
+label.radio-label,
+label.checkbox-label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 15px;
+    font-size: 13px;
+}
+
+.radio input[type=radio] {
+    display: none;
+}
+
+label.radio-label:before,
+label.checkbox-label:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    background-color: #fff;
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+}
+
+label.radio-label:before {
+    border-radius: 8px;
+}
+
+.radio input[type=radio]:checked+label.radio-label:before {
+    content: "\2022";
+    color: #007c7c;
+    font-size: 30px;
+    text-align: center;
+    line-height: 18px;
+}
+
+#contact-form .radio-buttons li,
+#contact-form .checkboxes li {
+    display: inline-block;
+}
+
+#contact-form .radio-buttons label,
+#contact-form .checkboxes label {
+    line-height: 22px;
+    margin-right: 20px;
+}
+
+.checkbox input[type=checkbox] {
+    display: none;
+}
+
+.checkbox label:before {
+    border-radius: 3px;
+}
+
+input[type=checkbox]:checked+label:before {
+    background: url("../../img/CMI-WebIcon-Sprite.png") no-repeat scroll -101px -4192px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    font-size: 15px;
+    color: #007c7c;
+    text-align: center;
+    line-height: 15px;
+}
+
+#contact-form .required-text {
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+#contact-form .required-text span {
+    font-family: "Helvetica Neue 55", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #D02323;
+}
+
+.contact-form-wrapper {
+    background: #eeeeee;
+    background-clip: content-box;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.contact-form-left-wrap {
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.contact-form-right-wrap {
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.contact-form-bottom-wrap {
+    padding-top: 10px;
+}
+
+.contact-form-left-wrap,
+.contact-form-right-wrap,
+.contact-form-bottom-wrap {
+    margin-top: 20px;
+}
+
+.contact-form-bottom-buttons {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.primary-cta {
+    background: #666;
+    background-image: -webkit-linear-gradient(top, #666, #000000);
+    background-image: -moz-linear-gradient(top, #666, #000000);
+    background-image: -ms-linear-gradient(top, #666, #000000);
+    background-image: -o-linear-gradient(top, #666, #000000);
+    background-image: linear-gradient(to bottom, #666, #000000);
+    -webkit-border-radius: 5;
+    -moz-border-radius: 5;
+    border-radius: 5px;
+    font-family: "Helvetica Neue 55", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    margin: 0px 10px;
+}
+
+.primary-cta:hover,
+.primary-cta:focus {
+    background: #333333;
+    text-decoration: none;
+    color: #fff;
+}
+
+.primary-cta:first-child {
+    margin-left: 0px;
+}
+
+.secondary-cta {
+    background: #666;
+    background-image: -webkit-linear-gradient(top, #fff, #cccccc);
+    background-image: -moz-linear-gradient(top, #fff, #cccccc);
+    background-image: -ms-linear-gradient(top, #fff, #cccccc);
+    background-image: -o-linear-gradient(top, #fff, #cccccc);
+    background-image: linear-gradient(to bottom, #fff, #cccccc);
+    -webkit-border-radius: 5;
+    -moz-border-radius: 5;
+    border-radius: 5px;
+    font-family: "Helvetica Neue 55", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #000000;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    margin: 0px 10px;
+}
+
+.secondary-cta:hover,
+.secondary-cta:focus {
+    background: #fff;
+    text-decoration: none;
+    color: #000000;
+}
+
+.secondary-cta:first-child {
+    margin-left: 0px;
+}
+
+@media (max-width: 800px) {
+    #contact-form .form-group div {
+        padding-left: 15px;
+    }
+    #contact-form .phone div:first-child {
+        padding-left: 15px;
+    }
+    #contact-form .phone div:last-child {
+        padding-right: 15px;
+    }
+    #contact-form .phone div {
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: 750px) {
+    .primary-cta:first-child {
+        margin-bottom: 10px;
+    }
+    .secondary-cta {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    #contact-form .radio-title,
+    #contact-form .checkbox-title,
+    #contact-form .details label {
+        text-align: left;
+    }
+    #contact-form .details label {
+        min-width: 35px;
+    }
+}
+
+@media (max-width: 638px) {
+    #contact-form .radio-buttons .radio-holder,
+    #contact-form .checkboxes .checkbox-holder,
+    #contact-form .details .details-input {
+        padding-left: 5px;
+    }
+    #contact-form .radio-buttons .required,
+    #contact-form .checkboxes .required,
+    #contact-form .details .required {
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 540px) {
+    #contact-form .longer-title {
+        width: 60px;
+    }
+}
+
+@media (max-width: 320px) {
+    #contact-form .contact-form-main,
+    #contact-form .contact-form-info,
+    #contact-form .contact-form-wrapper,
+    #contact-form .contact-form-bottom .details {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #contact-form .radio-buttons,
+    #contact-form .checkboxes {
+        margin-left: 0px;
+    }
+    #contact-form .radio-buttons li,
+    #contact-form .checkboxes li {
+        display: block;
+    }
+    #contact-form .form-group .required {
+        padding-left: 5px;
+    }
+    #contact-form .contact-form-bottom-buttons button {
+        margin-bottom: 10px;
+    }
+    .comment .footer,
+    .comment .header .title {
+        background-color: #ffffff26!important;
+    }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<!-------------------------------------- HEAD --------------------------------------------------------->
+<head>
+	 <meta charset="UTF-8" />
+    <th:block th:include="header :: head"></th:block>
+
+    <link rel="stylesheet" th:href="@{/css/partsAndTools/styles.css}" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<!------------------------------------ END HEAD ------------------------------------------------------->
+
+<body>
+
+    <div th:replace="header :: header"></div>
+
+    <!-------------------------------------- BREADCRUMBS --------------------------------------------------------->
+    <div class="breadcrumb-component">
+        <div class="container">
+            <div id="bc1" class="btn-group btn-breadcrumb">
+                <a th:href="@{/view/} "  class="btn btn-default"> 
+                	<div th:text="#{text.admin.catalogs.home}">Home </div>
+                </a>
+                
+                
+                <a id="bcModulo" th:if="${isAdmin == '1'}" th:href="@{/view/} + 'admin/Admin'" class="btn btn-default" >
+                	<div th:text="#{text.admin.catalogs.administration}">Administración</div>
+                </a>
+                
+                <a id="bcModulo" th:if="${isAdmin == '1'}" th:href="@{/view/} + 'admin/informationLoad/InformationLoad'" class="btn btn-default active" >
+                	<div th:text="#{text.sidebar.left.informationLoad}">Carga de Información </div>
+                	</a>
+                
+            </div>
+        </div>
+    </div>
+    <!---------------------------------- END BREADCRUMBS --------------------------------------------------------->
+
+	<!---------------------------------------      CONTENT     --------------------------------------->
+    <div class="container" style="width: 100%; margin-top: 15px;">
+        <div th:replace="admin/Admin :: menu">
+            
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <div th:fragment="menuInformationLoad">
+                <nav >
+                    <ul id="topnav" style="padding-left: 0px;">
+                    
+                    	<!-- PQ'S -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1' }">
+                        		<a th:if="${isAdmin == '1'}"  th:href="@{/view/} + 'admin/informationLoad/pqs'" th:text="#{text.admin.informationLoad.pqs}">PQs</a>
+                        </li>
+                        
+                        <!-- SERVICE POINTS -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1'}">
+                        		<a th:if="${isAdmin == '1'}" th:href="@{/view/} + 'admin/informationLoad/servicePoints'" th:text="#{text.admin.informationLoad.servicePoints}">Puntos de Servicio</a>
+                        </li>
+                        
+                        <!-- QSOL -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1'}">
+                        		<a th:if="${isAdmin == '1' }"  th:href="@{/view/} + 'admin/informationLoad/qsolLicenses'" th:text="#{text.admin.informationLoad.qsolLicenses}">Licencias de Qsol</a>
+                        </li>
+                        
+                        <!-- INSITE ELECTRONIC TOOLS -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1'}">
+                        		<a th:if="${isAdmin == '1'}" th:href="@{/view/} + 'admin/informationLoad/insiteElectronicTools'" th:text="#{text.admin.informationLoad.insiteElectronicTools}">Herramientas Electrónicas Insites</a>
+                        </li>
+                        
+                        <!-- RESCUES -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1'}">
+                        		<a th:if="${isAdmin == '1'}" th:href="@{/view/} + 'admin/informationLoad/rescues'" th:text="#{text.admin.informationLoad.rescues}">Rescates</a>
+                        </li>
+                        
+                        
+                        <!-- NO AVAILABILITY -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1'}">
+                        		<a th:if="${isAdmin == '1'}" th:href="@{/view/} + 'admin/informationLoad/noAvailability'" th:text="#{text.admin.informationLoad.noAvailability}">No Disponibilidad</a>
+                        </li>
+                        
+                        <!-- PROMOTIONS -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1'}">
+                        		<a th:if="${isAdmin == '1' }"  th:href="@{/view/} + 'admin/informationLoad/promotions'" th:text="#{text.admin.informationLoad.promotions}">Promotion</a>
+                        </li>
+                        
+                        <!-- WARRANTY -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1'}">
+                        		<a th:if="${isAdmin == '1'}"  th:href="@{/view/} + 'admin/informationLoad/guarantee'" th:text="#{text.admin.informationLoad.guarantee}">Garantías</a>
+                        </li>
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+	<!--------------------------------------     END CONTENT     --------------------------------------->
+    
+    <!-- FOOTER -->
+    <div th:replace="footer :: footer"></div>
+
+</body>
+
+</html>

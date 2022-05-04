@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<!-----------------------------------------      HEAD      --------------------------------------->
+<head>
+	 <meta charset="UTF-8" />
+    <th:block th:include="header :: head"></th:block>
+
+    <link rel="stylesheet" th:href="@{/css/partsAndTools/styles.css}" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<!----------------------------------------     END HEAD     ------------------------------------->
+
+<body>
+
+    <div th:replace="header :: header"></div>
+
+    <!--------------------------------------- BREADCRUMBS --------------------------------------->
+    <div class="breadcrumb-component">
+        <div class="container">
+            <div id="bc1" class="btn-group btn-breadcrumb">
+                
+                <a th:href="@{/view/}" class="btn btn-default">Home</a>
+                
+                
+                <a id="bcModulo" th:if="${isAdmin == '1' }" th:href="@{/view/} + 'admin/Admin'" class="btn btn-default" th:text="#{text.admin.catalogs.administration}">Administración</a>
+               
+                
+                
+                
+                <a id="bcModulo" th:if="${isAdmin == '1' }" th:href="@{/view/} + 'admin/partsAndTools/PartsAndTools'" class="btn btn-default active" th:text="#{text.sidebar.left.partsAndTools}">Partes y Herramientas</a>
+            	
+            </div>
+        </div>
+    </div>
+    <!--------------------------------------- END  BREADCRUMBS --------------------------------------->
+
+	<!---------------------------------------      CONTENT    ---------------------------------------->
+    <div class="container" style="width: 100%; margin-top: 15px;">
+        <div th:replace="admin/Admin :: menu">
+            
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <div th:fragment="menuPartsAndTools">
+                <nav >
+                    <ul id="topnav" class="pull-right" style="padding-left: 0px;">
+                    	<!-- TOOLS -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1'}">
+                        		<a th:if="${isAdmin == '1'}" th:href="@{/view/} + 'admin/partsAndTools/tools'" th:text="#{text.admin.partsAndTools.tools}">Herramientas</a>
+                        		
+                       	</li>
+                       	
+                       	<!-- PARTS -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1'}">
+                        		<a th:if="${isAdmin == '1'}" th:href="@{/view/} + 'admin/partsAndTools/parts'" th:text="#{text.admin.partsAndTools.parts}">Partes</a>
+                        		
+                       	</li>
+                       	
+                       	<!-- PARTS MATRIX -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1'}">
+                        		<a th:if="${isAdmin == '1'}" th:href="@{/view/} + 'admin/partsAndTools/partsMatrix'" th:text="#{text.admin.partsAndTools.partsMatrix}">Matriz Partes</a>
+                        		
+                        </li>
+                        
+                        <!-- TOOLS MATRIX -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>      
+                        <li th:if="${isAdmin == '1'}">
+                        		<a th:if="${isAdmin == '1'}" th:href="@{/view/} + 'admin/partsAndTools/toolsMatrix'" th:text="#{text.admin.partsAndTools.toolsMatrix }">Matriz Herramientas</a>
+                        		
+                        </li>
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>                 
+                    </ul>
+                </nav>
+            </div>
+            <div>
+
+            </div>
+
+            
+        </div>
+    </div>
+	<!---------------------------------------      CONTENT    ---------------------------------------->
+    
+    <!--      FOOTER     -->
+    <div th:replace="footer :: footer"></div>
+
+</body>
+
+</html>

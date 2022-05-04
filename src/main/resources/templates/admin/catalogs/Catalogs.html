@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	 <meta charset="UTF-8" />
+    <th:block th:include="header :: head"></th:block>
+
+    <link rel="stylesheet" th:href="@{/css/catalogs/styles.css}" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div th:replace="header :: header"></div>
+
+    <!-- Begin Breadcrumbs -->
+    <div class="breadcrumb-component">
+        <div class="container">
+            <div id="bc1" class="btn-group btn-breadcrumb">
+                <a th:href="@{/view/}" class="btn btn-default">
+                    <div>Home</div>
+                </a>
+                <a id="bcModulo" th:if="${isAdmin == '1'}" th:href="@{/view/} + 'admin/Admin'" class="btn btn-default" th:text="#{text.admin.catalogs.administration}">Administración</a>
+                
+                <a id="bcModulo" th:if="${isAdmin == '1'}" th:href="@{/view/} + 'admin/catalogs/Catalogs'" class="btn btn-default active" th:text="#{text.admin.catalogs.catalogs}">Catálogos</a>
+                
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumbs -->
+
+    <div class="container" style="width: 100%; margin-top: 15px;">
+        <div th:replace="admin/Admin :: menu">
+            
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <div th:fragment="menuCatalogs">
+                <nav >
+                    <ul id="topnav" class="pull-right" style="padding-left: 0px;">
+                        
+                       
+                        
+                        
+                        
+                        
+                        <!-- REGIONS -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1'}"><a th:href="@{/view/} + 'admin/catalogs/regions'" th:text="#{text.admin.catalogs.regions}">Regiones</a></li>
+                        
+                        <!-- COUNTRIES -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1' }"><a th:href="@{/view/} + 'admin/catalogs/countries'" th:text="#{text.admin.catalogs.countries}">Paises</a></li>
+                        
+                        <!-- PRODUCTS MOTORS -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1' }"><a th:href="@{/view/} + 'admin/catalogs/motorProducts'" th:text="#{text.admin.catalogs.products}">Productos / Motores</a></li>
+                        
+                        <!-- RANKS -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1' }"><a th:href="@{/view/} + 'admin/catalogs/ranks'" th:text="#{text.admin.catalogs.ranks}">Rangos</a></li>
+                        
+                        
+                        
+                        <!-- APPLICATIONS -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1' }"><a th:href="@{/view/} + 'admin/catalogs/applications'" th:text="#{text.admin.catalogs.applications}">Aplicaciones</a></li>
+                        
+                        
+						<!-- EMISSIONS -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1' }"><a th:href="@{/view/} + 'admin/catalogs/emissions'" th:text="#{text.admin.catalogs.emissions}">Emisiones</a></li>
+                        
+                        
+                        <!-- OEM´S -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1' }"><a th:href="@{/view/} + 'admin/catalogs/oems'" th:text="#{text.admin.catalogs.oems}">OEMs</a></li>
+                        
+                        <!-- SERVICE LEVEL -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1' }"><a th:href="@{/view/} + 'admin/catalogs/serviceLevel'" th:text="#{text.admin.catalogs.servicelevel}">Nivel de Servicio</a></li>
+                        
+                        
+                        
+                        <!-- COMPLAINTS -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1' }"><a th:href="@{/view/} + 'admin/catalogs/complaints'" th:text="#{text.admin.catalogs.complaints}">Quejas</a></li>
+                        
+                          
+                         <!-- QSOL -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1' }"><a th:href="@{/view/} + 'admin/catalogs/qsol'" th:text="#{text.admin.catalogs.useofqsol}">Uso de Qsol</a></li>
+                        
+                        
+                        <!-- PRODUCT SPECIFICATION -->
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                        <li th:if="${isAdmin == '1' }"><a th:href="@{/view/} + 'admin/catalogs/espm'" th:text="#{text.admin.catalogs.productspecification}">Especificación de Productos</a></li>
+                       
+                        <li th:if="${isAdmin == '1'}" class="divider"></li>
+                    
+                    </ul>
+                </nav>
+            </div>
+            <div>
+
+            </div>
+
+            
+        </div>
+    </div>
+
+    <div th:replace="footer :: footer"></div>
+
+</body>
+
+</html>
